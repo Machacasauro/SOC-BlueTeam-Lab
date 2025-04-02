@@ -11,38 +11,14 @@ Establecer un conjunto de reglas personalizadas para la detección eficaz de ame
 
 ### Ejemplos de Reglas
 
-1. **SSH Brute Force Detection**
-```bash
-alert tcp any any -> any 22 (msg:"SSH Brute Force Detected"; threshold:type both, track by_src, count 5, seconds 60; sid:1000001;)
-```
-
-2. **HTTP GET Flood**
-```bash
-alert tcp any any -> any 80 (msg:"HTTP GET Flood Detected"; flow:to_server,established; content:"GET"; http_method; threshold:type both, track by_src, count 20, seconds 10; sid:1000002;)
-```
-
-3. **MySQL Brute Force Detection**
-```bash
-alert tcp any any -> any 3306 (msg:"MySQL Brute Force Detected"; flow:to_server,established; content:"Access denied"; nocase; threshold:type both, track by_src, count 5, seconds 60; sid:1000004;)
-```
-
-4. **ICMP DoS Attack**
-```bash
-alert icmp any any -> any any (msg:"ICMP DoS Attack Detected"; itype:8; threshold:type both, track by_src, count 50, seconds 10; sid:1000005;)
-```
-
-5. **Jumbo Frames Detection**
-```bash
-alert ip any any -> any any (msg:"Jumbo Frames Detected"; dsize:>9000; sid:1000006;)
-```
-
+➡️ [custom.rules](suricata/custom.rules)
 ---
 
 ## 🔧 Reglas y Configuración en Wazuh
 
 **Archivo:** `/var/ossec/etc/ossec.conf`
 
-- Activación de Active-Response para bloqueo de IPs sospechosas:
+- Activación de Active-Response para bloqueo de IPs sospechosas en IPTables:
 ```xml
 <active-response>
   <command>firewalldrop</command>
@@ -50,6 +26,12 @@ alert ip any any -> any any (msg:"Jumbo Frames Detected"; dsize:>9000; sid:10000
   <level>10</level>
   <timeout>600</timeout>
 </active-response>
+```
+## Reglas personalizadas
+
+Puedes consultar las reglas locales de Wazuh aquí:
+
+➡️ [local_rules.xml](wazuh/local_rules.xml)
 ```
 
 - Reglas de integridad y eventos críticos:
@@ -67,4 +49,3 @@ Zeek opera como analizador pasivo y registra:
 - Actividad inusual en puertos.
 
 TShark utilizado para capturas puntuales y análisis forense de tráfico.
-

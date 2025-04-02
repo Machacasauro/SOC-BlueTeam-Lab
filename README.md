@@ -14,7 +14,7 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 
 - Cisco Cybersecurity Operations Fundamentals  (200-201 CBROPS)
 - TryHackMe SOC Level 1
-- Mikrotik (MTCNA, MTCRE, MTCWE) Reglas de firewall perimetral, Qos,
+- Mikrotik RouterOS 7.12 Certificaciones  (MTCNA, MTCRE, MTCWE) Reglas de firewall perimetral, Qos y VLAN
 
 ## 📚 Índice del Proyecto
 

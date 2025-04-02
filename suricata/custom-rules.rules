@@ -1,0 +1,120 @@
+##############################################
+# Suricata Custom Rules
+# Author: Nathan
+# Date: 11/03/2025
+# Description: Rules to detect various types
+#              of Nmap scans and brute force.
+##############################################
+
+##############################################
+# 1. SSH Brute Force Detection
+##############################################
+alert tcp any any -> any 22 (msg:"SSH Brute Force Detected"; threshold:type both, track by_src, count 5, seconds 60; classtype:attempted-admin; sid:100011; rev:2;)
+
+##############################################
+# 2. HTTP GET Flood
+##############################################
+alert http any any -> any 80 (msg:"HTTP GET Flood Detected"; flow:to_server,established; content:"GET"; http_method; threshold:type both, track by_src, count 20, seconds 10; classtype:web-application-attack; sid:100021; rev:1;)
+
+##############################################
+# 3. HTTPS Suspicious Connection
+##############################################
+alert tls any any -> any 443 (msg:"Suspicious HTTPS Connection"; flow:to_server,established; tls.sni; content:"example.com"; nocase; classtype:trojan-activity; sid:100031; rev:1;)
+
+##############################################
+# 4. MySQL Brute Force Detection
+##############################################
+alert tcp any any -> any 3306 (msg:"MySQL Brute Force Detected"; flow:to_server,established; content:"Access denied"; nocase; threshold:type both, track by_src, count 5, seconds 60; classtype:attempted-admin; sid:100041; rev:1;)
+
+##############################################
+# 5. Nmap Scan Detection
+##############################################
+
+# 5.1 SYN Scan Detection (Stealth Scan)
+alert tcp any any -> any any (msg:"Nmap SYN Scan Detected"; flags:S; threshold:type both, track by_src, count 20, seconds 10; classtype:attempted-recon; sid:100051; rev:1;)
+
+# 5.2 NULL Scan Detection
+alert tcp any any -> any any (msg:"Nmap NULL Scan Detected"; flags:0; threshold:type both, track by_src, count 10, seconds 10; classtype:attempted-recon; sid:100052; rev:1;)
+
+# 5.3 FIN Scan Detection
+alert tcp any any -> any any (msg:"Nmap FIN Scan Detected"; flags:F; threshold:type both, track by_src, count 10, seconds 10; classtype:attempted-recon; sid:100053; rev:1;)
+
+# 5.4 Xmas Scan Detection
+alert tcp any any -> any any (msg:"Nmap Xmas Scan Detected"; flags:FUAPRS; threshold:type both, track by_src, count 10, seconds 10; classtype:attempted-recon; sid:100054; rev:1;)
+
+# 5.5 ACK Scan Detection
+alert tcp any any -> any any (msg:"Nmap ACK Scan Detected"; flags:A; threshold:type both, track by_src, count 10, seconds 10; classtype:attempted-recon; sid:100055; rev:1;)
+
+# 5.6 UDP Scan Detection
+alert udp any any -> any any (msg:"Nmap UDP Scan Detected"; threshold:type both, track by_src, count 20, seconds 10; classtype:attempted-recon; sid:100056; rev:1;)
+
+# 5.7 Version Detection Scan
+alert tcp any any -> any any (msg:"Nmap Version Scan Detected"; flags:S; flow:to_server,established; content:"\\x4E\\x4D\\x50"; threshold:type both, track by_src, count 5, seconds 60; classtype:attempted-recon; sid:100057; rev:1;)
+
+
+##############################################
+# 6. External Scan Detection (Extended)
+##############################################
+
+# 6.1 Aggressive SYN Scan (Masscan/Zmap)
+alert tcp any any -> any any (msg:"Aggressive SYN Scan Detected (Masscan/Zmap)"; flags:S; threshold:type both, track by_src, count 500, seconds 10; classtype:attempted-recon; sid:1000061; rev:1;)
+
+# 6.2 ICMP Ping Sweep Detection
+alert icmp any any -> any any (msg:"ICMP Ping Sweep Detected"; itype:8; threshold:type both, track by_src, count 10, seconds 5; classtype:attempted-recon; sid:100062; rev:1;)
+
+# 6.3 Fragmented Packet Scan Detection
+alert ip any any -> any any (msg:"Fragmented Packet Scan Detected"; fragbits:M; threshold:type both, track by_src, count 5, seconds 10; classtype:attempted-recon; sid:1000063; rev:1;)
+
+# 6.4 HTTP Directory Brute Force (dirbuster/gobuster)
+alert http any any -> any any (msg:"HTTP Directory Brute Force Detected"; flow:to_server,established; pcre:"/^GET \/.*/"; threshold:type both, track by_src, count 100, seconds 60; classtype:web-application-attack; sid:1000064; rev:2;)
+
+# 6.5 Suspicious UDP Flood (UDP Scan/DoS)
+alert udp any any -> any any (msg:"Suspicious UDP Flood Detected"; threshold:type both, track by_src, count 200, seconds 10; classtype:attempted-dos; sid:1000065; rev:1;)
+
+# 6.6 IPFingerprint Scan Detection (Common patterns)
+alert tcp any any -> any any (msg:"IPFingerprint Port Scan Detected"; flags:S; threshold:type both, track by_src, count 50, seconds 20; classtype:attempted-recon; sid:1000066; rev:1;)
+
+# 6.7 TCP Xmas Tree Scan with URG/PSH/FIN
+alert tcp any any -> any any (msg:"TCP Xmas Tree Scan Detected"; flags:UPF; threshold:type both, track by_src, count 10, seconds 10; classtype:attempted-recon; sid:1000067; rev:1;)
+
+# 6.8 Unusual Port Scanning (High Port Ranges)
+alert tcp any any -> any 1024:65535 (msg:"High Port Range Scan Detected"; flags:S; threshold:type both, track by_src, count 30, seconds 20; classtype:attempted-recon; sid:1000068; rev:1;)
+
+# 6.9 SYN Stealth Scan
+alert tcp any any -> any any (msg:"SYN Stealth Scan Detected"; flags:S; threshold:type both, track by_src, count 20, seconds 10; classtype:attempted-recon; sid:1000069; rev:1;)
+
+# 6.10 NULL Scan Detection
+alert tcp any any -> any any (msg:"NULL Scan Detected"; flags:0; threshold:type both, track by_src, count 10, seconds 10; classtype:attempted-recon; sid:1000070; rev:1;)
+
+# 6.11 FIN Scan Detection
+alert tcp any any -> any any (msg:"FIN Scan Detected"; flags:F; threshold:type both, track by_src, count 10, seconds 10; classtype:attempted-recon; sid:1000071; rev:1;)
+
+# 6.12 XMAS Scan Detection
+alert tcp any any -> any any (msg:"XMAS Scan Detected"; flags:UPF; threshold:type both, track by_src, count 10, seconds 10; classtype:attempted-recon; sid:1000072; rev:1;)
+
+# 6.13 Connect() Scan Detection
+alert tcp any any -> any any (msg:"Connect() Scan Detected"; flags:S; flow:to_server,established; threshold:type both, track by_src, count 30, seconds 10; classtype:attempted-recon; sid:1000074; rev:1;)
+
+
+##############################################
+# 7. ICMP Flood Detection + xss
+##############################################
+
+# 7.1 ICMP Flood Detection 
+alert icmp any any -> any any (msg:"ICMP Flood Detected"; itype:8; detection_filter:track by_src, count 100, seconds 10; sid:100080; rev:1;)
+
+# 7.2 XSS 1
+alert http any any -> any any (msg:"Possible XSS Attack Detected"; flow:to_server,established; content:"<script"; nocase; http_uri; classtype:web-application-attack; sid:100081; rev:1;)
+
+#7.3 XSS 2
+alert http any any -> any any (msg:"Possible XSS Attack Detected - Event Handler"; flow:to_server,established; content:"onerror="; nocase; http_uri; classtype:web-application-attack; sid:1000082; rev:1;)
+
+# 7.4 XSS 3
+alert http any any -> any any (msg:"Possible XSS Attack Detected - JavaScript URI"; flow:to_server,established; content:"javascript:"; nocase; http_uri; classtype:web-application-attack; sid:1000083; rev:1;)
+
+# 7.4 PCRE Hex
+alert http any any -> any any (msg:"Possible XSS Attack Detected - PCRE"; flow:to_server,established; pcre:"/((<|%3C)script)/i"; http_uri; classtype:web-application-attack; sid:1000085; rev:1;)
+
+##############################################
+# END OF RULES
+##############################################
