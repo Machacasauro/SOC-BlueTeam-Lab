@@ -27,12 +27,13 @@ sudo apt install elasticsearch logstash kibana -y
 
 ### Configuration
 - Elasticsearch: [/etc/elasticsearch/elasticsearch.yml](../../Elasticsearch/elasticsearch.yml)
-- Logstash: [/etc/logstash/conf.d/](../../Logstash/conf.d/filebeat.conf)
+- Logstash: [/etc/logstash/conf.d/filebeat.conf](../../Logstash/conf.d/filebeat.conf)
 - Kibana: [/etc/kibana/kibana.yml](../../kibana/kibana.yml)
 
 Start services:
 ```bash
-sudo systemctl enable --now elasticsearch logstash kibana
+sudo systemctl enable elasticsearch logstash kibana
+sudo systemctl start elasticsearch logstash kibana
 ```
 
 ---
@@ -91,7 +92,7 @@ Configure integration with Kibana and Filebeat.
 
 ---
 
-## 6. Installation of Zeek
+## 6. Installation of Zeek (Complementary)
 
 ```bash
 sudo apt update
@@ -102,7 +103,32 @@ Zeek operates as an independent system.
 
 ---
 
-## 7. Troubleshooting
+## 7. Installation of TShark (Complementary)
+
+**TShark** is used as an auxiliary tool for on-demand traffic capture and forensic network analysis.
+
+### Installation
+```bash
+sudo apt update
+sudo apt install tshark -y
+```
+
+### Basic Usage
+Capture traffic on the main network interface:
+```bash
+sudo tshark -i enp0s3 -w /home/soc/captures/capture.pcap
+```
+
+Filter HTTP packets:
+```bash
+tshark -r capture.pcap -Y "http"
+```
+
+**Note:** TShark is not integrated into ELK or Wazuh. Its use is manual for specific validation and analysis.
+
+---
+
+## 8. Troubleshooting
 
 | Issue | Solution |
 |:-:|:-:|
@@ -114,7 +140,7 @@ Zeek operates as an independent system.
 
 ---
 
-## 8. Verification
+## 9. Verification
 - Confirm that Suricata logs appear in Kibana.
 - Verify that Wazuh events are active.
 - Check Zeek and TShark captures.

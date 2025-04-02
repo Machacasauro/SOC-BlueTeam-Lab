@@ -17,7 +17,7 @@ Establish a set of custom rules for effective threat detection in the SOC enviro
 
 ## 🔧 Rules and Configuration in Wazuh
 
-**File:** `/var/ossec/etc/ossec.conf`
+**File:** [/var/ossec/etc/ossec.conf](../../ossec/ossec.conf)
 
 - Active-Response activation to block suspicious IPs in IPTables:
 ```xml

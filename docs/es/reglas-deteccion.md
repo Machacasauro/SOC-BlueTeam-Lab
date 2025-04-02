@@ -12,12 +12,12 @@ Establecer un conjunto de reglas personalizadas para la detección eficaz de ame
 ### Ejemplos de Reglas
 
 ➡️ [custom.rules](../../suricata/custom.rules)
-```
+
 ---
 
 ## 🔧 Reglas y Configuración en Wazuh
 
-**Archivo:** `/var/ossec/etc/ossec.conf`
+**Archivo:** [/var/ossec/etc/ossec.conf](../../ossec/ossec.conf)
 
 - Activación de Active-Response para bloqueo de IPs sospechosas en IPTables:
 ```xml
@@ -33,7 +33,6 @@ Establecer un conjunto de reglas personalizadas para la detección eficaz de ame
 Puedes consultar las reglas locales de Wazuh aquí:
 
 ➡️ [local_rules.xml](../../wazuh/local_rules.xml)
-```
 
 - Reglas de integridad y eventos críticos:
   - Modificación de archivos críticos.
@@ -44,9 +43,9 @@ Puedes consultar las reglas locales de Wazuh aquí:
 
 ## 🌐 Complemento con Zeek y TShark
 
-Zeek opera como analizador pasivo y registra:
-- Conexiones sospechosas.
-- Análisis de DNS y TLS.
-- Actividad inusual en puertos.
+- Zeek opera como analizador pasivo y registra:
+  - Conexiones sospechosas.
+  - Análisis de DNS y TLS.
+  - Actividad inusual en puertos.
 
 TShark utilizado para capturas puntuales y análisis forense de tráfico.

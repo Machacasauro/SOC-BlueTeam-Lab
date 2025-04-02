@@ -1,4 +1,4 @@
-# Installation Guide - OpenSOC Network Defense
+# Guía de instalación - OpenSOC Network Defense
 
 ## 🔧 Objetivo
 Proporcionar los pasos detallados para la instalación y configuración de los componentes principales del entorno OpenSOC Network Defense.
@@ -27,12 +27,13 @@ sudo apt install elasticsearch logstash kibana -y
 
 ### Configuración
 - Elasticsearch: [/etc/elasticsearch/elasticsearch.yml](../../Elasticsearch/elasticsearch.yml)
-- Logstash: [/etc/logstash/conf.d/](../../Logstash/conf.d/filebeat.conf)
+- Logstash: [/etc/logstash/conf.d/filebeat.conf](../../Logstash/conf.d/filebeat.conf)
 - Kibana: [/etc/kibana/kibana.yml](../../kibana/kibana.yml)
 
 Iniciar servicios:
 ```bash
 sudo systemctl enable elasticsearch logstash kibana
+sudo systemctl start elasticsearch logstash kibana
 ```
 ---
 
@@ -91,7 +92,7 @@ Configurar integración con Kibana y Filebeat.
 
 ---
 
-## 6. Instalación de Zeek
+## 6. Instalación de Zeek (Complementario)
 
 ```bash
 sudo apt update
@@ -101,8 +102,31 @@ sudo zeekctl deploy
 Zeek opera como sistema independiente.
 
 ---
+## 7. Instalación de TShark (Complementario)
 
-## 7. Troubleshooting
+**TShark** se utiliza como herramienta auxiliar para capturas y análisis forense de tráfico de red.
+
+### Instalación
+```bash
+sudo apt update
+sudo apt install tshark -y
+```
+
+### Uso básico
+Captura de tráfico en la interfaz principal:
+```bash
+sudo tshark -i enp0s3 -w /home/ubuntu/capturas/captura.pcap
+```
+
+Filtrado de paquetes HTTP:
+```bash
+tshark -r captura.pcap -Y "http"
+```
+
+**Nota:** No está integrado directamente en ELK o Wazuh. Su uso es manual para validación puntual.
+
+---
+## 8. Troubleshooting
 
 | Problema | Solución |
 |:-:|:-:|
@@ -114,7 +138,8 @@ Zeek opera como sistema independiente.
 
 ---
 
-## 8. Verificación
+## 9. Verificación
 - Confirmar que los logs de Suricata aparecen en Kibana.
 - Verificar que los eventos de Wazuh están activos.
 - Comprobar capturas de Zeek y TShark.
+
