@@ -32,6 +32,8 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 
 ## 1. Arquitectura del Proyecto
 
+[Guía de instalación](docs/es/guia-instalacion.md)
+
 **Entorno:**
 
 - SO: Ubuntu Server 22.04 LTS (Servidor Apache, Mysql, Documental) Lab
@@ -51,10 +53,11 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 - Wazuh: Correlación de eventos, integración con Filebeat y Active-Response.
 - Zeek y TShark: Análisis pasivo y forense de tráfico de red.\
 
-[Guía de instalación](docs/installation-guide.md)
 ---
 
 ## 2. Implementación Técnica
+
+[Configuración de dashboards](docs/es/configuracion-dashboard.md)
 
 ### Instalación y configuración de Elastic Stack
 
@@ -66,20 +69,21 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 - Confirmar que los logs fluyen correctamente.
 - Revisar dashboards en Kibana.
 
-[Configuración de dashboards](docs/dashboards-setup.md)
+
 
 ## 3. Simulación de Escenarios de Ataques
 
-[Simulación de ataques](docs/attack-simulation.md)
+[Simulación de ataques](docs/es/simulacion-ataque.md)
 ---
 
 ## 4. Análisis y Correlación de Eventos
+
+[Reglas de detección](docs/es/reglas-deteccion.md)
 
 - Revisar alertas de Suricata en Kibana.
 - Correlación mediante Wazuh.
 - Uso de TShark y Zeek para análisis pasivo.
 
-[Reglas de detección](docs/detection-rules.md)
 ---
 
 ## 5. Automatización y Gestión de Vulnerabilidades
@@ -115,8 +119,9 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 
 ## 9. Certificaciones Complementarias y Futuras
 
-- Próxima certificaciuón: Security Analyst Level 1 (SAL1)
-- Preparación activa para: eJPT v2 (INE Security)
+- Próxima certificaciuón: Security Analyst Level 1 (SAL1) :shield:
+- Preparación activa para: eJPT v2 (INE Security) :crossed_swords:
+- Objetivo: Purple Team :crossed_swords: :shield:
 
 ---
 

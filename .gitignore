@@ -1,0 +1,44 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs y capturas de tráfico
+*.log
+*.pcap
+*.pcapng
+*.cap
+
+# Archivos temporales y de backup
+*.tmp
+*.bak
+*.swp
+
+# Archivos de entorno y configuración local
+.env
+*.local
+.vscode/
+.idea/
+
+# Archivos de sistema operativo
+*.~lock.*
+ehthumbs.db
+desktop.ini
+
+# Archivos de salida o distribución
+*.zip
+*.tar.gz
+*.rar
+
+# Archivos de bases de datos temporales
+*.sqlite
+*.db
+
+# Archivos de configuración sensibles
+*.key
+*.pem
+*.crt
+
+# Datos de análisis y pruebas
+data/
+output/
+results/
