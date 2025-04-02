@@ -16,7 +16,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 - TryHackMe SOC Level 1
 - Mikrotik RouterOS 7.12 Certifications (MTCNA, MTCRE, MTCWE) - Perimeter firewall rules, QoS, and VLAN
 
-## 📚 Project Index
+## Project Index
 
 1. Project Architecture
 2. Technical Implementation
@@ -32,7 +32,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 
 ## 1. Project Architecture
 
-[Installation Guide](installation-guide.md)
+#### 📄 [Installation Guide](installation-guide.md)
 
 **Environment:**
 
@@ -57,7 +57,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 
 ## 2. Technical Implementation
 
-[Dashboards Setup](dashboards-setup.md)
+### 📊 [Dashboards Setup](dashboards-setup.md)
 
 ### Installation and Configuration of Elastic Stack
 
@@ -69,17 +69,21 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 - Confirm that logs flow correctly.
 - Review dashboards in Kibana.
 
+<div style="background: #f9f9f9; padding: 10px; border-left: 5px solid #f39c12;">
+  <a href="suricata-detection-alerts.md"><strong>🚨 Detection Alerts Dashboard</strong></a>
+</div>
+
 ---
 
 ## 3. Attack Scenarios Simulation
 
-[Attack Simulation](attack-simulation.md)
+### 🎯 [Attack Simulation](attack-simulation.md)
 
 ---
 
 ## 4. Event Analysis and Correlation
 
-[Detection Rules](detection-rules.md)
+### 🛡️ [Detection Rules](detection-rules.md)
 
 - Review Suricata alerts in Kibana.
 - Event correlation via Wazuh.
@@ -126,7 +130,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 
 ---
 
-## 📅 Troubleshooting and Issues Solved
+## Troubleshooting and Issues Solved
 
 - Incorrect configuration in suricata.yaml: Solved by verifying syntax and using `suricata -T`.
 - Connection issues between Filebeat and Logstash: Resolved by adjusting ports and YAML configuration.

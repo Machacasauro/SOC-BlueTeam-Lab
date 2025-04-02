@@ -16,7 +16,7 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 - TryHackMe SOC Level 1
 - Mikrotik RouterOS 7.12 Certificaciones  (MTCNA, MTCRE, MTCWE) Reglas de firewall perimetral, Qos y VLAN
 
-## 📚 Índice del Proyecto
+## Índice del Proyecto
 
 1. Arquitectura del Proyecto
 2. Implementación Técnica
@@ -32,7 +32,7 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 
 ## 1. Arquitectura del Proyecto
 
-[Guía de instalación](guia-instalacion.md)
+### 📄 [Guía de instalación](guia-instalacion.md)
 
 **Entorno:**
 
@@ -57,7 +57,7 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 
 ## 2. Implementación Técnica
 
-[Configuración de dashboards](configuracion-dashboard.md)
+### 📊 [Configuración de dashboards](configuracion-dashboard.md)
 
 ### Instalación y configuración de Elastic Stack
 
@@ -69,16 +69,19 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 - Confirmar que los logs fluyen correctamente.
 - Revisar dashboards en Kibana.
 
+<div style="background: #f9f9f9; padding: 10px; border-left: 5px solid #f39c12;">
+  <a href="alertas-deteccion-suricata.md"><strong>🚨 Alertas capturadas Dashboard</strong></a>
+</div>
 
-
+---
 ## 3. Simulación de Escenarios de Ataques
 
-[Simulación de ataques](simulacion-ataque.md)
+### 🎯 [Simulación de ataques](simulacion-ataque.md)
 ---
 
 ## 4. Análisis y Correlación de Eventos
 
-[Reglas de detección](reglas-deteccion.md)
+### 🛡️ [Reglas de detección](reglas-deteccion.md)
 
 - Revisar alertas de Suricata en Kibana.
 - Correlación mediante Wazuh.
@@ -125,7 +128,8 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 
 ---
 
-## 📅 Troubleshooting y Problemas Solventados
+
+##  Troubleshooting y Problemas Solventados
 
 - Configuración errónea en suricata.yaml: Se solucionó verificando la sintaxis y usando `suricata -T`.
 - Problemas de conexión entre Filebeat y Logstash: Ajuste de puertos y configuración YAML.

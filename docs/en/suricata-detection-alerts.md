@@ -34,7 +34,7 @@ ICMP traffic flood detected. This behavior is typical of an ICMP DoS attack wher
 
 ## 🔍 4. Nmap ACK Scan Detected
 
-![Nmap ACK Scan Detected](../images/NMAPAckScanDetected.jpg)
+![Nmap ACK Scan Detected](../../images/NMAPAckScanDetected.jpg)
 
 **Description:**  
 Suricata detected a network scan consistent with Nmap ACK scan behavior. This scan type is used to map firewall rules and identify ports that are not filtered.
