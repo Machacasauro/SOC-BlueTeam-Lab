@@ -32,7 +32,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 
 ## 1. Project Architecture
 
-#### 📄 [Installation Guide](installation-guide.md)
+### 📄 [Installation Guide](installation-guide.md)
 
 **Environment:**
 
