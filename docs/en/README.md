@@ -32,7 +32,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 
 ## 1. Project Architecture
 
-[Installation Guide](docs/en/installation-guide.md)
+[Installation Guide](installation-guide.md)
 
 **Environment:**
 
@@ -57,7 +57,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 
 ## 2. Technical Implementation
 
-[Dashboards Setup](docs/en/dashboards-setup.md)
+[Dashboards Setup](dashboards-setup.md)
 
 ### Installation and Configuration of Elastic Stack
 
@@ -73,13 +73,13 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 
 ## 3. Attack Scenarios Simulation
 
-[Attack Simulation](docs/en/attack-simulation.md)
+[Attack Simulation](attack-simulation.md)
 
 ---
 
 ## 4. Event Analysis and Correlation
 
-[Detection Rules](docs/en/detection-rules.md)
+[Detection Rules](detection-rules.md)
 
 - Review Suricata alerts in Kibana.
 - Event correlation via Wazuh.

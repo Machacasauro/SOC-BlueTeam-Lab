@@ -32,7 +32,7 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 
 ## 1. Arquitectura del Proyecto
 
-[Guía de instalación](docs/es/guia-instalacion.md)
+[Guía de instalación](guia-instalacion.md)
 
 **Entorno:**
 
@@ -57,7 +57,7 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 
 ## 2. Implementación Técnica
 
-[Configuración de dashboards](docs/es/configuracion-dashboard.md)
+[Configuración de dashboards](configuracion-dashboard.md)
 
 ### Instalación y configuración de Elastic Stack
 
@@ -73,12 +73,12 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 
 ## 3. Simulación de Escenarios de Ataques
 
-[Simulación de ataques](docs/es/simulacion-ataque.md)
+[Simulación de ataques](simulacion-ataque.md)
 ---
 
 ## 4. Análisis y Correlación de Eventos
 
-[Reglas de detección](docs/es/reglas-deteccion.md)
+[Reglas de detección](reglas-deteccion.md)
 
 - Revisar alertas de Suricata en Kibana.
 - Correlación mediante Wazuh.
