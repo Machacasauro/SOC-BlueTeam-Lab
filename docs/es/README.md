@@ -69,9 +69,7 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 - Confirmar que los logs fluyen correctamente.
 - Revisar dashboards en Kibana.
 
-<div style="background: #f9f9f9; padding: 10px; border-left: 5px solid #f39c12;">
-  <a href="alertas-deteccion-suricata.md"><strong>🚨 Alertas capturadas Dashboard</strong></a>
-</div>
+> 🚨 **[Alertas Capturadas Dashboard](alertas-deteccion-suricata.md)**
 
 ---
 ## 3. Simulación de Escenarios de Ataques

@@ -7,7 +7,7 @@ Este documento contiene las alertas generadas por Suricata y visualizadas en Kib
 
 ## 🚀 1. HTTP GET Flood Detectado
 
-![HTTP GET Flood Detectado](../images/HTTPSGETFloodDetected.jpg)
+![HTTP GET Flood Detectado](../../images/HTTPSGETFloodDetected.jpg)
 
 **Descripción:**  
 Se detectó un volumen elevado de peticiones HTTP GET, indicativo de un intento de Denegación de Servicio (DoS) mediante un ataque conocido como HTTP GET Flood.

@@ -11,7 +11,7 @@ Bienvenido al laboratorio SOC orientado a la defensa cibernética.
 - 📊 [Configuración de Dashboards](docs/es/configuracion-dashboard.md)
 - ⚔️ [Simulación de Ataques](docs/es/simulacion-ataque.md)
 - 🚨 [Reglas de Detección](docs/es/reglas-deteccion.md)
-- 📑 [Alertas Capturadas - Dashboard](docs/es/alertas-deteccion-suricata.md)
+- 📑 [Alertas Capturadas Dashboard](docs/es/README.md#2-implementación-técnica)
 - 🔧 [Troubleshooting y Resolución de Incidencias](docs/es/README.md#troubleshooting-y-resolucion-de-incidencias)
 
 Welcome to the SOC Cyber ​​Defense Lab.
@@ -25,5 +25,5 @@ Welcome to the SOC Cyber ​​Defense Lab.
 - 📊 [Dashboards Setup](docs/en/dashboards-setup.md)
 - ⚔️ [Attack Simulation](docs/en/attack-simulation.md)
 - 🚨 [Detection Rules](docs/en/detection-rules.md)
-- 📑 [Captured Alerts Dashboard](docs/en/README.md#captured-alerts-dashboard)
+- 📑 [Captured Alerts Dashboard](docs/en/README.md#2-technical-implementation)
 - 🔧 [Troubleshooting and Issues Solved](docs/en/README.md#troubleshooting-and-issues-solved)

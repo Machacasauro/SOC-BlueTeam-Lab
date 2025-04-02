@@ -69,9 +69,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 - Confirm that logs flow correctly.
 - Review dashboards in Kibana.
 
-<div style="background: #f9f9f9; padding: 10px; border-left: 5px solid #f39c12;">
-  <a href="suricata-detection-alerts.md"><strong>🚨 Detection Alerts Dashboard</strong></a>
-</div>
+> 🚨 **[Captured Alerts Dashboard](suricata-detection-alerts.md)**
 
 ---
 
