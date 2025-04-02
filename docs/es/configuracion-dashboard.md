@@ -6,7 +6,7 @@ Diseñar y configurar dashboards personalizados en Kibana para la monitorizació
 ---
 
 ## 🔹 Componentes Monitorizados
-- Suricata (IDS/IPS)
+- Suricata (IDS)
 - Wazuh (Host-based Intrusion Detection)
 - Zeek (Network Analysis)
 - Filebeat (Log Collector)
@@ -17,9 +17,7 @@ Diseñar y configurar dashboards personalizados en Kibana para la monitorizació
 
 ### 1. Configuración de Index Patterns
 En Kibana, crear los siguientes index patterns:
-- `filebeat-*`
-- `wazuh-alerts-*`
-- `zeek-*` (si Wazuh está integrado opcionalmente, que es este caso)
+- `suricata-logs-*`
 
 ### 2. Dashboards principales creados
 

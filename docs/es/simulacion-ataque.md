@@ -37,7 +37,7 @@ nmap -sS -p 1-65535 192.168.10.5
 - **Herramienta:** SQLMap
 - **Comando ejecutado:**
 ```bash
-sqlmap -u "http://target.com/vuln.php?id=1" --risk=3 --level=5 --batch
+sqlmap -u "http://192.168.10.5/vuln.php?id=1" --risk=3 --level=5 --batch
 ```
 - **Resultado esperado:**
   - Detección por Suricata mediante reglas HTTP.

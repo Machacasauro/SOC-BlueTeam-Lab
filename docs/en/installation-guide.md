@@ -46,10 +46,15 @@ sudo apt install suricata -y
 ```
 
 ### Execution
+Manual:
 ```bash
 sudo suricata -i enp0s3 -c /etc/suricata/suricata.yaml --af-packet
 ```
-
+Service (Recommended):
+```bash
+sudo systemctl enable suricata
+sudo systemctl start suricata
+```
 ---
 
 ## 4. Installation and configuration of Filebeat

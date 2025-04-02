@@ -29,13 +29,11 @@ sudo apt install elasticsearch logstash kibana -y
 - Elasticsearch: [/etc/elasticsearch/elasticsearch.yml](../../Elasticsearch/elasticsearch.yml)
 - Logstash: [/etc/logstash/conf.d/](../../Logstash/conf.d/filebeat.conf)
 - Kibana: [/etc/kibana/kibana.yml](../../kibana/kibana.yml)
-```
 
 Iniciar servicios:
 ```bash
-sudo systemctl enable --now elasticsearch logstash kibana
+sudo systemctl enable elasticsearch logstash kibana
 ```
-
 ---
 
 ## 3. Instalación y configuración de Suricata
@@ -47,10 +45,16 @@ sudo apt install suricata -y
 ```
 
 ### Ejecución
+Manual:
 ```bash
 sudo suricata -i enp0s3 -c /etc/suricata/suricata.yaml --af-packet
 ```
-
+---
+Servicio (Recomendado):
+```bash
+sudo systemctl enable suricata
+sudo systemctl start suricata
+```
 ---
 
 ## 4. Instalación y configuración de Filebeat
@@ -69,7 +73,7 @@ output.logstash:
   hosts: ["localhost:5044"]
 ```
 
-Inicio:
+Servicio:
 ```bash
 sudo systemctl start filebeat
 sudo systemctl enable filebeat
