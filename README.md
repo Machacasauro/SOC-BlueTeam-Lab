@@ -3,12 +3,12 @@
 Bienvenido al laboratorio SOC orientado a la defensa cibernética.
 
 📄 Documentación disponible:
-- [Español](es/README.md)
+- [Español](docs/es/README.md)
 
 Welcome to the SOC Cyber ​​Defense Lab.
 
 📄 Available documentation:
-- [English](en/README.md)
+- [English](docs/en/README.md)
 
 
 
