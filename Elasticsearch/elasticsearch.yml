@@ -1,0 +1,18 @@
+cluster.name: elasticsearch-cluster
+node.name: ${HOSTNAME}
+
+# Define node roles - this node should have master, data, and ingest roles
+node.roles: [master, data, ingest]
+
+path.data: /var/lib/elasticsearch
+path.logs: /var/log/elasticsearch
+
+network.host: 0.0.0.0
+http.port: 9200
+
+# Use the local IP address for discovery if running a single-node cluster
+# discovery.seed_hosts: ["192.168.10.5"]
+cluster.initial_master_nodes: ["192.168.10.5"]
+
+xpack.security.enabled: false
+bootstrap.memory_lock: false

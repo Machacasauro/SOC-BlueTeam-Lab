@@ -11,7 +11,8 @@ Establecer un conjunto de reglas personalizadas para la detección eficaz de ame
 
 ### Ejemplos de Reglas
 
-➡️ [custom.rules](suricata/custom.rules)
+➡️ [custom.rules](../../suricata/custom.rules)
+```
 ---
 
 ## 🔧 Reglas y Configuración en Wazuh
@@ -31,7 +32,7 @@ Establecer un conjunto de reglas personalizadas para la detección eficaz de ame
 
 Puedes consultar las reglas locales de Wazuh aquí:
 
-➡️ [local_rules.xml](wazuh/local_rules.xml)
+➡️ [local_rules.xml](../../wazuh/local_rules.xml)
 ```
 
 - Reglas de integridad y eventos críticos:

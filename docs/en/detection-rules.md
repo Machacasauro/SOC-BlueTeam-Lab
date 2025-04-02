@@ -11,7 +11,7 @@ Establish a set of custom rules for effective threat detection in the SOC enviro
 
 ### Rule Examples
 
-➡️ [custom.rules](suricata/custom.rules)
+➡️ [custom.rules](../../suricata/custom.rules)
 
 ---
 
@@ -29,7 +29,7 @@ Establish a set of custom rules for effective threat detection in the SOC enviro
 </active-response>
 ```
 **Custom rules:**  
-➡️ [local_rules.xml](wazuh/local_rules.xml)
+➡️ [local_rules.xml](../../wazuh/local_rules.xml)
 
 - Integrity and critical event rules:
   - Modification of critical files.

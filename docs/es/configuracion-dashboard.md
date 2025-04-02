@@ -19,7 +19,7 @@ Diseñar y configurar dashboards personalizados en Kibana para la monitorizació
 En Kibana, crear los siguientes index patterns:
 - `filebeat-*`
 - `wazuh-alerts-*`
-- `zeek-*` (si Zeek está integrado opcionalmente)
+- `zeek-*` (si Wazuh está integrado opcionalmente, que es este caso)
 
 ### 2. Dashboards principales creados
 

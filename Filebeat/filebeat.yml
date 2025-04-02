@@ -1,0 +1,71 @@
+###################### Filebeat Configuration Example #########################
+
+# ============================== Filebeat inputs ===============================
+
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/suricata/eve.json
+  json.keys_under_root: true
+  json.add_error_key: true
+
+# ============================== Filebeat modules ==============================
+
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+# =============================== Output Configuration =========================
+
+# Enable Logstash output. Commented out the Elasticsearch output to prevent conflicts.
+output.logstash:
+  hosts: ["localhost:5044"]
+  pipeline: "suricata-pipeline"
+
+# ---------------------------- Elasticsearch Output ----------------------------
+# Commented out to avoid conflict with Logstash output.
+# output.elasticsearch:
+#  hosts: ["localhost:9200"]
+
+# ============================== Elasticsearch template setting =================
+
+setup.template.settings:
+  index.number_of_shards: 1
+
+# =================================== Kibana ===================================
+
+setup.kibana:
+  host: "localhost:5601"
+
+# ================================= Processors =================================
+
+processors:
+  - add_host_metadata:
+      when.not.contains.tags: forwarded
+  - add_cloud_metadata: ~
+  - add_docker_metadata: ~
+  - add_kubernetes_metadata: ~
+
+# ================================== Logging ===================================
+
+logging:
+  level: info
+  to_files: true
+  files:
+    path: /var/log/filebeat
+    name: filebeat
+    keepfiles: 7
+    permissions: 0644
+
+
+# ============================= X-Pack Monitoring ==============================
+
+# Enable monitoring if needed.
+#monitoring.enabled: false
+
+# ============================== Instrumentation ===============================
+
+# Enable instrumentation if needed.
+#instrumentation:
+#   enabled: false

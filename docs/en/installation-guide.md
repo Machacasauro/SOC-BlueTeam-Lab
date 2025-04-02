@@ -26,9 +26,9 @@ sudo apt install elasticsearch logstash kibana -y
 ```
 
 ### Configuration
-- Elasticsearch: `/etc/elasticsearch/elasticsearch.yml`
-- Logstash: `/etc/logstash/conf.d/`
-- Kibana: `/etc/kibana/kibana.yml`
+- Elasticsearch: [/etc/elasticsearch/elasticsearch.yml](../../Elasticsearch/elasticsearch.yml)
+- Logstash: [/etc/logstash/conf.d/](../../Logstash/conf.d/filebeat.conf)
+- Kibana: [/etc/kibana/kibana.yml](../../kibana/kibana.yml)
 
 Start services:
 ```bash
@@ -62,7 +62,7 @@ sudo filebeat modules enable suricata
 ```
 
 ### Configuration
-File: `/etc/filebeat/filebeat.yml`
+File: [/etc/filebeat/filebeat.yml](../../Filebeat/filebeat.yml)
 ```yaml
 output.logstash:
   hosts: ["localhost:5044"]
