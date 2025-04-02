@@ -129,7 +129,7 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 ---
 
 
-##  Troubleshooting y Problemas Solventados
+##  Troubleshooting y Resolución de Incidencias
 
 - Configuración errónea en suricata.yaml: Se solucionó verificando la sintaxis y usando `suricata -T`.
 - Problemas de conexión entre Filebeat y Logstash: Ajuste de puertos y configuración YAML.
