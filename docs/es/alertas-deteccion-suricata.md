@@ -3,7 +3,7 @@
 
 Este documento contiene las alertas generadas por Suricata y visualizadas en Kibana como parte del proyecto SOC Blue Team Lab. Cada alerta representa un escenario de amenaza diferente, simulado y analizado dentro del laboratorio.
 
----
+
 
 ## 🚀 1. HTTP GET Flood Detectado
 
@@ -12,7 +12,7 @@ Este documento contiene las alertas generadas por Suricata y visualizadas en Kib
 **Descripción:**  
 Se detectó un volumen elevado de peticiones HTTP GET, indicativo de un intento de Denegación de Servicio (DoS) mediante un ataque conocido como HTTP GET Flood.
 
----
+
 
 ## 🔒 2. Conexiones HTTPS Sospechosas
 
@@ -21,7 +21,7 @@ Se detectó un volumen elevado de peticiones HTTP GET, indicativo de un intento 
 **Descripción:**  
 Se identificaron múltiples conexiones TLS/HTTPS marcadas como sospechosas. Este comportamiento puede estar relacionado con actividades de reconocimiento o escaneo automatizado de servicios HTTPS.
 
----
+
 
 ## 🌐 3. ICMP DoS Attack Detectado
 
@@ -30,7 +30,7 @@ Se identificaron múltiples conexiones TLS/HTTPS marcadas como sospechosas. Este
 **Descripción:**  
 Se detectó un flujo elevado de tráfico ICMP. Este comportamiento es típico de un ataque de Denegación de Servicio (DoS) utilizando paquetes ICMP Echo Request.
 
----
+
 
 ## 🔍 4. Nmap ACK Scan Detectado
 
@@ -39,7 +39,7 @@ Se detectó un flujo elevado de tráfico ICMP. Este comportamiento es típico de
 **Descripción:**  
 Suricata identificó un escaneo de red consistente con un escaneo ACK de Nmap. Este tipo de escaneo se utiliza para mapear reglas de firewall y descubrir puertos no filtrados.
 
----
+
 
 ## ⚠️ 5. Posible Ataque XSS Detectado
 
@@ -48,7 +48,7 @@ Suricata identificó un escaneo de red consistente con un escaneo ACK de Nmap. E
 **Descripción:**  
 Se detectó un posible intento de ataque Cross-Site Scripting (XSS), en el que se intentó inyectar código malicioso en peticiones HTTP para manipular scripts del lado del cliente.
 
----
+
 
 ## 🧩 6. Escaneo de Puertos de Servicios Detectado
 
@@ -57,7 +57,7 @@ Se detectó un posible intento de ataque Cross-Site Scripting (XSS), en el que s
 **Descripción:**  
 Se identificó actividad de escaneo de puertos dirigida a servicios conocidos (SSH, HTTP, HTTPS, MySQL). Este comportamiento es comúnmente asociado a tareas de reconocimiento.
 
----
+
 
 ## 🔑 7. Ataque de Fuerza Bruta SSH Detectado
 
@@ -66,7 +66,7 @@ Se identificó actividad de escaneo de puertos dirigida a servicios conocidos (S
 **Descripción:**  
 Suricata detectó múltiples intentos de acceso no autorizado al servicio SSH mediante técnicas de fuerza bruta.
 
----
+
 
 ## 📄 Resumen
 

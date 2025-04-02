@@ -3,7 +3,7 @@
 
 This document contains the Suricata detection alerts visualized in Kibana as part of the SOC Blue Team Lab project. Each alert represents a different threat scenario, demonstrated and analyzed within the environment.
 
----
+
 
 ## 🚀 1. HTTP GET Flood Detected
 
@@ -12,7 +12,7 @@ This document contains the Suricata detection alerts visualized in Kibana as par
 **Description:**  
 A high volume of HTTP GET requests was detected, which is indicative of a Denial-of-Service (DoS) attempt, specifically an HTTP GET Flood attack.
 
----
+
 
 ## 🔒 2. Suspicious HTTPS Connections
 
@@ -21,7 +21,7 @@ A high volume of HTTP GET requests was detected, which is indicative of a Denial
 **Description:**  
 Multiple TLS/HTTPS connections were flagged as suspicious. This could indicate reconnaissance activity or automated scanning tools trying to enumerate HTTPS services.
 
----
+
 
 ## 🌐 3. ICMP DoS Attack Detected
 
@@ -30,7 +30,7 @@ Multiple TLS/HTTPS connections were flagged as suspicious. This could indicate r
 **Description:**  
 ICMP traffic flood detected. This behavior is typical of an ICMP DoS attack where the attacker tries to exhaust network resources using ICMP Echo Requests.
 
----
+
 
 ## 🔍 4. Nmap ACK Scan Detected
 
@@ -39,7 +39,7 @@ ICMP traffic flood detected. This behavior is typical of an ICMP DoS attack wher
 **Description:**  
 Suricata detected a network scan consistent with Nmap ACK scan behavior. This scan type is used to map firewall rules and identify ports that are not filtered.
 
----
+
 
 ## ⚠️ 5. Possible XSS Attack Detected
 
@@ -48,7 +48,7 @@ Suricata detected a network scan consistent with Nmap ACK scan behavior. This sc
 **Description:**  
 A potential Cross-Site Scripting (XSS) attack was detected, where malicious scripts might have been injected in HTTP requests to manipulate client-side scripts.
 
----
+
 
 ## 🧩 6. Services Ports Scan Detected
 
@@ -57,7 +57,7 @@ A potential Cross-Site Scripting (XSS) attack was detected, where malicious scri
 **Description:**  
 Port scanning activity was identified targeting well-known service ports (SSH, HTTP, HTTPS, MySQL). This behavior is commonly associated with reconnaissance attacks.
 
----
+
 
 ## 🔑 7. SSH Brute Force Attack Detected
 
@@ -66,7 +66,7 @@ Port scanning activity was identified targeting well-known service ports (SSH, H
 **Description:**  
 Suricata detected repeated attempts to gain unauthorized access to the SSH service by brute force password guessing.
 
----
+
 
 ## 📄 Summary
 

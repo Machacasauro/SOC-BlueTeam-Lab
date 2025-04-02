@@ -3,7 +3,7 @@
 ## 📊 Objetivo
 Diseñar y configurar dashboards personalizados en Kibana para la monitorización efectiva de alertas, eventos y análisis de tráfico de red.
 
----
+
 
 ## 🔹 Componentes Monitorizados
 - Suricata (IDS)
@@ -11,7 +11,7 @@ Diseñar y configurar dashboards personalizados en Kibana para la monitorizació
 - Zeek (Network Analysis)
 - Filebeat (Log Collector)
 
----
+
 
 ## 🔧 Procedimiento de Configuración
 
@@ -53,7 +53,7 @@ Reglas configuradas para:
 - Escaneos de red sospechosos.
 - Posible SQL Injection detectado.
 
----
+
 
 ## 🔄 Actualización Continua
 Los dashboards son revisados y ajustados periódicamente en función de:

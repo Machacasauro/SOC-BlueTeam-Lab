@@ -3,7 +3,7 @@
 ## 🔧 Objetivo
 Proporcionar los pasos detallados para la instalación y configuración de los componentes principales del entorno OpenSOC Network Defense.
 
----
+
 
 ## 1. Requisitos del Sistema
 
@@ -12,7 +12,7 @@ Proporcionar los pasos detallados para la instalación y configuración de los c
 - 4 vCPU
 - 80 GB de almacenamiento
 
----
+
 
 ## 2. Instalación de Elastic Stack (Elasticsearch, Logstash, Kibana)
 
@@ -35,7 +35,7 @@ Iniciar servicios:
 sudo systemctl enable elasticsearch logstash kibana
 sudo systemctl start elasticsearch logstash kibana
 ```
----
+
 
 ## 3. Instalación y configuración de Suricata
 
@@ -50,13 +50,13 @@ Manual:
 ```bash
 sudo suricata -i enp0s3 -c /etc/suricata/suricata.yaml --af-packet
 ```
----
+
 Servicio (Recomendado):
 ```bash
 sudo systemctl enable suricata
 sudo systemctl start suricata
 ```
----
+
 
 ## 4. Instalación y configuración de Filebeat
 
@@ -80,7 +80,7 @@ sudo systemctl start filebeat
 sudo systemctl enable filebeat
 ```
 
----
+
 
 ## 5. Instalación y configuración de Wazuh
 
@@ -90,7 +90,7 @@ https://documentation.wazuh.com/current/installation-guide/index.html
 
 Configurar integración con Kibana y Filebeat.
 
----
+
 
 ## 6. Instalación de Zeek (Complementario)
 
@@ -101,7 +101,7 @@ sudo zeekctl deploy
 ```
 Zeek opera como sistema independiente.
 
----
+
 ## 7. Instalación de TShark (Complementario)
 
 **TShark** se utiliza como herramienta auxiliar para capturas y análisis forense de tráfico de red.
@@ -125,7 +125,7 @@ tshark -r captura.pcap -Y "http"
 
 **Nota:** No está integrado directamente en ELK o Wazuh. Su uso es manual para validación puntual.
 
----
+
 ## 8. Troubleshooting
 
 | Problema | Solución |
@@ -136,7 +136,7 @@ tshark -r captura.pcap -Y "http"
 | Wazuh agent no reporta | Verificar clave y conectividad |
 | Plugin Wazuh en Kibana no carga | Comprobar versión e instalación correcta |
 
----
+
 
 ## 9. Verificación
 - Confirmar que los logs de Suricata aparecen en Kibana.

@@ -3,7 +3,7 @@
 ## 🔎 Objective
 Establish a set of custom rules for effective threat detection in the SOC environment.
 
----
+
 
 ## 🛡️ Custom Rules in Suricata
 
@@ -13,7 +13,7 @@ Establish a set of custom rules for effective threat detection in the SOC enviro
 
 ➡️ [custom.rules](../../suricata/custom.rules)
 
----
+
 
 ## 🔧 Rules and Configuration in Wazuh
 
@@ -36,7 +36,7 @@ Establish a set of custom rules for effective threat detection in the SOC enviro
   - Changes in sensitive configurations.
   - Repeated failed access attempts.
 
----
+
 
 ## 🌐 Complement with Zeek and TShark
 

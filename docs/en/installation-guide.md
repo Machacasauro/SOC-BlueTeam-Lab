@@ -3,7 +3,7 @@
 ## 🔧 Objective
 Provide detailed steps for installing and configuring the main components of the OpenSOC Network Defense environment.
 
----
+
 
 ## 1. System Requirements
 
@@ -12,7 +12,7 @@ Provide detailed steps for installing and configuring the main components of the
 - 4 vCPU
 - 80 GB storage
 
----
+
 
 ## 2. Installation of Elastic Stack (Elasticsearch, Logstash, Kibana)
 
@@ -36,7 +36,7 @@ sudo systemctl enable elasticsearch logstash kibana
 sudo systemctl start elasticsearch logstash kibana
 ```
 
----
+
 
 ## 3. Installation and configuration of Suricata
 
@@ -56,7 +56,7 @@ Service (Recommended):
 sudo systemctl enable suricata
 sudo systemctl start suricata
 ```
----
+
 
 ## 4. Installation and configuration of Filebeat
 
@@ -80,7 +80,7 @@ sudo systemctl start filebeat
 sudo systemctl enable filebeat
 ```
 
----
+
 
 ## 5. Installation and configuration of Wazuh
 
@@ -90,7 +90,7 @@ https://documentation.wazuh.com/current/installation-guide/index.html
 
 Configure integration with Kibana and Filebeat.
 
----
+
 
 ## 6. Installation of Zeek (Complementary)
 
@@ -101,7 +101,7 @@ sudo zeekctl deploy
 ```
 Zeek operates as an independent system.
 
----
+
 
 ## 7. Installation of TShark (Complementary)
 
@@ -126,7 +126,7 @@ tshark -r capture.pcap -Y "http"
 
 **Note:** TShark is not integrated into ELK or Wazuh. Its use is manual for specific validation and analysis.
 
----
+
 
 ## 8. Troubleshooting
 
@@ -138,7 +138,7 @@ tshark -r capture.pcap -Y "http"
 | Wazuh agent not reporting | Check key and connectivity |
 | Wazuh plugin in Kibana not loading | Check version and proper installation |
 
----
+
 
 ## 9. Verification
 - Confirm that Suricata logs appear in Kibana.

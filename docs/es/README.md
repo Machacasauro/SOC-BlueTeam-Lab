@@ -28,7 +28,6 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 8. Documentación Técnica y Playbooks
 9. Certificaciones Complementarias y Futuras
 
----
 
 ## 1. Arquitectura del Proyecto
 
@@ -53,7 +52,6 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 - Wazuh: Correlación de eventos, integración con Filebeat y Active-Response.
 - Zeek y TShark: Análisis pasivo y forense de tráfico de red.\
 
----
 
 ## 2. Implementación Técnica
 
@@ -71,11 +69,11 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 
 > 🚨 **[Alertas Capturadas Dashboard](alertas-deteccion-suricata.md)**
 
----
+
 ## 3. Simulación de Escenarios de Ataques
 
 ### 🎯 [Simulación de ataques](simulacion-ataque.md)
----
+
 
 ## 4. Análisis y Correlación de Eventos
 
@@ -85,7 +83,7 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 - Correlación mediante Wazuh.
 - Uso de TShark y Zeek para análisis pasivo.
 
----
+
 
 ## 5. Automatización y Gestión de Vulnerabilidades
 
@@ -93,21 +91,21 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 - Generación de reportes semanales.
 - Uso de OpenVAS para escaneo de vulnerabilidades.
 
----
+
 
 ## 6. Inteligencia de Amenazas (CTI/OSINT)
 
 - Integración de fuentes OSINT:
   - AbuseIPDB
 
----
+
 
 ## 7. Análisis Forense Digital (DFIR)
 
 - Extracción y análisis de logs post-incidente.
 - Uso de Wireshark, Zeek y Volatility para investigación avanzada.
 
----
+
 
 ## 8. Documentación Técnica y Playbooks
 
@@ -116,7 +114,7 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
   - Respuesta ante incidentes.
   - Análisis forense.
 
----
+
 
 ## 9. Certificaciones Complementarias y Futuras
 
@@ -124,7 +122,7 @@ Este laboratorio tiene como objetivo demostrar mis capacidades técnicas en la a
 - Preparación activa para: eJPT v2 (INE Security) :crossed_swords:
 - Objetivo: Purple Team :crossed_swords: :shield:
 
----
+
 
 
 ##  Troubleshooting y Resolución de Incidencias

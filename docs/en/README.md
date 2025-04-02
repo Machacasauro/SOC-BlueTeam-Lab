@@ -28,7 +28,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 8. Technical Documentation and Playbooks
 9. Complementary and Future Certifications
 
----
+
 
 ## 1. Project Architecture
 
@@ -53,7 +53,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 - Wazuh: Correlates events, integrates with Filebeat and Active-Response.
 - Zeek & TShark: Passive and forensic network traffic analysis.
 
----
+
 
 ## 2. Technical Implementation
 
@@ -71,13 +71,13 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 
 > 🚨 **[Captured Alerts Dashboard](suricata-detection-alerts.md)**
 
----
+
 
 ## 3. Attack Scenarios Simulation
 
 ### 🎯 [Attack Simulation](attack-simulation.md)
 
----
+
 
 ## 4. Event Analysis and Correlation
 
@@ -87,7 +87,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 - Event correlation via Wazuh.
 - Use of TShark and Zeek for passive analysis.
 
----
+
 
 ## 5. Automation and Vulnerability Management
 
@@ -95,21 +95,21 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 - Generation of weekly reports.
 - Use of OpenVAS for vulnerability scanning.
 
----
+
 
 ## 6. Threat Intelligence (CTI/OSINT)
 
 - Integration of OSINT sources:
   - AbuseIPDB
 
----
+
 
 ## 7. Digital Forensics and Incident Response (DFIR)
 
 - Extraction and analysis of logs post-incident.
 - Use of Wireshark, Zeek, and Volatility for advanced investigation.
 
----
+
 
 ## 8. Technical Documentation and Playbooks
 
@@ -118,7 +118,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
   - Incident response.
   - Forensic analysis.
 
----
+
 
 ## 9. Complementary and Future Certifications
 
@@ -126,7 +126,7 @@ This lab aims to demonstrate my technical capabilities in cybersecurity infrastr
 - Active preparation for: eJPT v2 (INE Security) :crossed_swords:
 - Objective: Purple Team :crossed_swords: :shield:
 
----
+
 
 ## Troubleshooting and Issues Solved
 

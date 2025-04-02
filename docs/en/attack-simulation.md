@@ -3,7 +3,7 @@
 ## 🔎 Objective
 Simulate attack scenarios in a controlled environment to validate the effectiveness of detection and response solutions implemented in the OpenSOC Network Defense project.
 
----
+
 
 ## 🔫 Simulated Attack Scenarios
 
@@ -18,7 +18,7 @@ hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.10.5
   - Correlated event in Kibana.
   - Automatic IP blocking in Wazuh Active-Response.
 
----
+
 
 ### 2. Port Scanning with Nmap
 - **Tool:** Nmap
@@ -31,7 +31,7 @@ nmap -sS -p 1-65535 192.168.10.5
   - Event registration in Wazuh and visualization in Kibana.
   - Detailed logs in Zeek.
 
----
+
 
 ### 3. SQL Injection
 - **Tool:** SQLMap
@@ -44,7 +44,7 @@ sqlmap -u "http://192.168.10.5/vuln.php?id=1" --risk=3 --level=5 --batch
   - Event logged in Wazuh.
   - Complementary analysis in TShark and Zeek.
 
----
+
 
 ### 4. ICMP DoS Attack
 - **Tool:** hping3
@@ -56,13 +56,13 @@ hping3 -1 --flood -V 192.168.10.5
   - Detection by Suricata and Wazuh.
   - Event visualized in Kibana.
 
----
+
 
 ## 🔎 Complementary Analysis
 - **TShark:** Used to capture and analyze packets during attacks.
 - **Zeek:** Generates network activity logs for detailed analysis.
 
----
+
 
 ## 📅 Detection Validation
 Each simulated attack has been validated by verifying:

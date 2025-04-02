@@ -3,7 +3,7 @@
 ## 🔎 Objetivo
 Establecer un conjunto de reglas personalizadas para la detección eficaz de amenazas en el entorno del SOC.
 
----
+
 
 ## 🛡️ Reglas Personalizadas en Suricata
 
@@ -13,7 +13,7 @@ Establecer un conjunto de reglas personalizadas para la detección eficaz de ame
 
 ➡️ [custom.rules](../../suricata/custom.rules)
 
----
+
 
 ## 🔧 Reglas y Configuración en Wazuh
 
@@ -39,7 +39,7 @@ Puedes consultar las reglas locales de Wazuh aquí:
   - Cambios en configuraciones sensibles.
   - Accesos fallidos reiterados.
 
----
+
 
 ## 🌐 Complemento con Zeek y TShark
 
